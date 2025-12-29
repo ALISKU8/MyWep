@@ -209,4 +209,40 @@ document.addEventListener('DOMContentLoaded', () => {
         initParticles();
         animateParticles();
     }
+
+    // --- Countdown Timer (Jan 18, 2026) ---
+    const countdownContainer = document.getElementById('countdown');
+    if (countdownContainer) {
+        const targetDate = new Date("Jan 18, 2026 00:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                // Timer Expired
+                countdownContainer.style.display = 'none';
+                const badge = document.querySelector('.coming-soon-badge-small');
+                if (badge) {
+                    badge.textContent = "AVAILABLE NOW";
+                    badge.style.borderColor = "#22c55e"; // Green
+                    badge.style.color = "#22c55e";
+                }
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    }
 });

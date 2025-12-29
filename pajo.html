@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pajo Extension | Ali AlZahrani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="pajo-page">
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay"></div>
+    <script>
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+    
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <span class="logo-text">A.A.Z</span>
+            <div class="logo-dot" style="background: var(--accent-pajo);"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="pajo.html" class="nav-item lang-flip" style="color: var(--accent-pajo);" data-ar="مشروع باجو">Pajo</a></li>
+            <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Detail Hero -->
+        <section class="detail-hero">
+            <div class="page-badge pajo-badge reveal-text">Chrome Extension</div>
+            <h1 class="detail-title elegant-text" data-text="Pajo Extension">Pajo Extension</h1>
+            <h2 class="hero-subtitle-static reveal-text delay-1">إضافتي الخاصة لتنظيم المتصفح وزيادة الإنتاجية</h2>
+            
+            <div class="detail-meta reveal-text delay-2">
+                <div class="meta-item">
+                    <i class="fas fa-code" style="color: var(--accent-pajo);"></i>
+                    <span class="lang-flip" data-ar="تطويري بالكامل">Developed by Me</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-calendar-alt" style="color: var(--accent-pajo);"></i>
+                    <span class="lang-flip" data-ar="2025">2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fab fa-chrome" style="color: var(--accent-pajo);"></i>
+                    <span class="lang-flip" data-ar="إضافة كروم">Browser Extension</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content (Split Layout) -->
+        <section class="section-padding" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="split-layout">
+                    <!-- Right Side: Image (Smaller & Simple) -->
+                    <div class="split-image reveal-left">
+                        <div class="browser-frame-simple">
+                            <div class="browser-header-simple">
+                                <div class="browser-dot-simple dot-red"></div>
+                                <div class="browser-dot-simple dot-yellow"></div>
+                                <div class="browser-dot-simple dot-green"></div>
+                            </div>
+                            <div class="browser-content-simple">
+                                <img src="صورة مشروع باجو.jpg" alt="Pajo Extension UI">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left Side: Content & Features -->
+                    <div class="split-content reveal-right">
+                        <h3 class="split-title lang-flip" data-ar="عن الإضافة">About Pajo</h3>
+                        <p class="split-desc lang-flip" data-ar="قمت بتصميم وبرمجة باجو ليكون المنظم الأمثل للتبويبات، بهدف تحسين الإنتاجية وأداء المتصفح. واجهة نظيفة تدعم اللغة العربية، وتساعدك في التحكم في فوضى التبويبات بسهولة.">
+                            I designed and developed Pajo to be the ultimate Tab Organizer for improving productivity and browser performance. It features a clean, RTL-friendly interface that helps you manage tab clutter effortlessly.
+                        </p>
+
+                        <!-- Compact Features List -->
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                                <div class="feature-text">
+                                    <h4 class="lang-flip" data-ar="إحصائيات التبويبات">Tab Statistics</h4>
+                                    <p class="lang-flip" data-ar="عرض إجمالي التبويبات المفتوحة">Track total open tabs</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-broom"></i></div>
+                                <div class="feature-text">
+                                    <h4 class="lang-flip" data-ar="صائد التكرار">Duplicate Hunter</h4>
+                                    <p class="lang-flip" data-ar="كشف وإغلاق الروابط المكررة">Identify & close duplicates</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-volume-up"></i></div>
+                                <div class="feature-text">
+                                    <h4 class="lang-flip" data-ar="مراقب الصوت">Audio Monitor</h4>
+                                    <p class="lang-flip" data-ar="كشف التبويبات التي تصدر صوتاً">Detect tabs playing audio</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-filter"></i></div>
+                                <div class="feature-text">
+                                    <h4 class="lang-flip" data-ar="البحث والتصفية">Search & Filter</h4>
+                                    <p class="lang-flip" data-ar="بحث بالعنوان أو الرابط">Find by title or URL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

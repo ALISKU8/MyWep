@@ -1,6 +1,4 @@
-# Design & Documentation
-design-docs/
-
-# System Files
+.trae/
 .DS_Store
 Thumbs.db
+node_modules/
