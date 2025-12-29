@@ -261,6 +261,43 @@
                 </div>
             </div>
         </section>
+
+        <!-- Guestbook Section -->
+        <section id="guestbook" class="guestbook-section">
+            <div class="guestbook-container">
+                <!-- Form Side -->
+                <div class="guestbook-form-wrapper glass-panel reveal-left">
+                    <div class="guestbook-title">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span class="lang-flip" data-ar="سجل الزوار">Guestbook</span>
+                    </div>
+                    
+                    <form id="guestbook-form">
+                        <div class="form-group">
+                            <input type="text" id="gb-name" class="gb-input" placeholder="Your Name (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="gb-message" class="gb-input" placeholder="Leave a professional comment..." required></textarea>
+                        </div>
+                        <button type="submit" class="gb-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Sign Guestbook</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Feed Side -->
+                <div class="guestbook-feed reveal-right">
+                    <div class="feed-header">
+                        <i class="fas fa-comments"></i> Recent Messages
+                    </div>
+                    <div id="guestbook-messages">
+                        <!-- Messages will appear here -->
+                        <div class="loading-spinner" style="margin: 2rem auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -269,5 +306,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="guestbook.js"></script>
 </body>
 </html>
