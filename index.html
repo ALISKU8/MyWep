@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Attia AlZahrani | Tech Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Transition Overlays -->
+    <div id="transition-overlay" class="overlay-default"></div>
+    <script>
+        // Inline script to prevent FOUC (Flash of Unstyled Content) during transition
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+    
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <span class="logo-text">A.A.Z</span>
+            <div class="logo-dot"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text-wrapper">
+                    <div class="status-badge reveal-text">
+                        <span class="status-dot"></span>
+                        <span class="lang-flip" data-ar="متاح للمشاريع">Available for Projects</span>
+                    </div>
+                    
+                    <h1 class="hero-title elegant-text" data-text="Ali Attia AlZahrani">Ali Attia AlZahrani</h1>
+                    <h2 class="hero-subtitle-static">علي عطيه الزهراني</h2>
+                    
+                    <div class="hero-description reveal-text delay-1">
+                        <p class="lang-flip" data-ar="قائد تقني ومطور Full Stack شغوف بالذكاء الاصطناعي والتحول الرقمي">Tech Leader and Full Stack Developer passionate about AI and Digital Transformation</p>
+                    </div>
+
+                    <div class="hero-actions reveal-text delay-2">
+                        <a href="mepco.html" class="action-pill mepco-theme">
+                            <i class="fas fa-industry"></i> My Journey at MEPCO
+                        </a>
+                        <a href="jeddah_uni.html" class="action-pill uni-theme">
+                            <i class="fas fa-university"></i> Leadership at UJ
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Bento Grid Start) -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">01</span>
+                    <h2 class="section-title lang-flip" data-ar="من أنا؟">Who am I?</h2>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-item bio-card reveal-up">
+                        <div class="card-content">
+                            <i class="fas fa-fingerprint card-icon-bg"></i>
+                            <h3 class="card-title">The Profile</h3>
+                            <p class="card-text lang-flip" data-ar="قائد تقني ومطور يركز على النتائج، أمتلك سجلاً حافلاً في العمليات الرقمية. حائز على جائزة 'قائد المتطوعين لعام 2025' نظير إشرافي على فرق عمل متنوعة. أجمع بين مهارات التطوير الشامل والتنسيق الاستراتيجي لتقديم قيمة فورية في عمليات تقنية المعلومات وإدارة المشاريع التقنية.">
+                                Results oriented Tech Leader & Developer with a track record in digital operations. Awarded "Volunteer Leader of the Year 2025" for supervising diverse teams. Combines Full Stack Development skills with strategic coordination to deliver immediate value in IT operations and technical project management.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bento-item stat-card reveal-up delay-1">
+                        <div class="stat-number">2025</div>
+                        <div class="stat-label lang-flip" data-ar="قائد العام">Leader of Year</div>
+                    </div>
+
+                    <div class="bento-item skill-card reveal-up delay-2">
+                        <i class="fas fa-code"></i>
+                        <span class="lang-flip" data-ar="تطوير شامل">Full Stack</span>
+                    </div>
+                    
+                    <div class="bento-item skill-card reveal-up delay-3">
+                        <i class="fas fa-users-cog"></i>
+                        <span class="lang-flip" data-ar="قيادة">Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">02</span>
+                    <h2 class="section-title lang-flip" data-ar="خبراتي">Experience</h2>
+                </div>
+
+                <div class="experience-showcase">
+                    <!-- MEPCO Card -->
+                    <a href="mepco.html" class="experience-card mepco-card reveal-left">
+                        <div class="exp-content">
+                            <div class="exp-icon"><i class="fas fa-industry"></i></div>
+                            <div class="exp-details">
+                                <span class="exp-role lang-flip" data-ar="تدريب مهني">Vocational Training</span>
+                                <h3 class="exp-company">MEPCO</h3>
+                                <p class="exp-desc">
+                            <span class="en">A professional journey full of challenges and achievements in a leading industrial environment.</span>
+                            <span class="ar">رحلة مهنية مليئة بالتحديات والإنجازات في بيئة صناعية رائدة.</span>
+                        </p>
+                            </div>
+                            <div class="exp-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                        <div class="card-glow orange-glow"></div>
+                    </a>
+
+                    <!-- UJ Card -->
+                    <a href="jeddah_uni.html" class="experience-card uni-card reveal-right">
+                        <div class="exp-content">
+                            <div class="exp-icon"><i class="fas fa-university"></i></div>
+                            <div class="exp-details">
+                                <span class="exp-role lang-flip" data-ar="قائد ومشرف">Leader & Supervisor</span>
+                                <h3 class="exp-company">UJ</h3>
+                                <p class="exp-desc">
+                            <span class="en">Leading over 700 volunteers and officially representing the university in major events.</span>
+                            <span class="ar">قيادة أكثر من 700 متطوع وتمثيل الجامعة في محافل رسمية كبرى.</span>
+                        </p>
+                            </div>
+                            <div class="exp-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                        <div class="card-glow blue-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="contact-wrapper glass-panel reveal-up">
+                    <div class="contact-header">
+                        <h2 class="lang-flip" data-ar="تواصل معي">Get in Touch</h2>
+                        <p class="lang-flip" data-ar="هل لديك مشروع أو فكرة؟ لنصنع شيئاً مبهراً معاً.">Got a project or idea? Let's create something amazing together.</p>
+                    </div>
+                    
+                    <div class="social-grid">
+                        <a href="https://www.linkedin.com/in/ali-alzahrani-08b00830b/" target="_blank" class="social-tile">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/ALISKU8" target="_blank" class="social-tile">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <div class="social-tile tooltip-trigger" id="email-tile">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                            <div class="custom-tooltip">ali.albadawi.18@gmail.com</div>
+                            <a href="mailto:ali.albadawi.18@gmail.com" class="tile-link"></a>
+                        </div>
+                        <a href="https://wa.me/966533260106" target="_blank" class="social-tile">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

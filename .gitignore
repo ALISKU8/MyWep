@@ -1,0 +1,6 @@
+# Design & Documentation
+design-docs/
+
+# System Files
+.DS_Store
+Thumbs.db

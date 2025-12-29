@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeddah Uni Journey | Ali AlZahrani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="uni-page">
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay"></div>
+    <script>
+        // Inline script to prevent FOUC (Flash of Unstyled Content) during transition
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+    
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <span class="logo-text">A.A.Z</span>
+            <div class="logo-dot" style="background: var(--accent-uni);"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" style="color: var(--accent-uni);" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Detail Hero -->
+        <section class="detail-hero">
+            <div class="page-badge uni-badge reveal-text">Student Affairs & Volunteering</div>
+            <h1 class="detail-title elegant-text" data-text="Leadership at UJ">Leadership at UJ</h1>
+            <h2 class="hero-subtitle-static reveal-text delay-1">قيادتي وإشرافي في جامعة جدة</h2>
+            
+            <div class="detail-meta reveal-text delay-2">
+                <div class="meta-item">
+                    <i class="far fa-calendar-alt" style="color: var(--accent-uni);"></i>
+                    <span class="lang-flip" data-ar="2023 - 2025">2023 - 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-uni);"></i>
+                    <span class="lang-flip" data-ar="جامعة جدة">Jeddah University</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Tasks Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">LEAD</span>
+                    <h2 class="section-title lang-flip" data-ar="الإنجازات القيادية" style="border-color: var(--accent-uni);">Leadership Achievements</h2>
+                </div>
+
+                <div class="tasks-grid">
+                    <!-- Task 1 -->
+                    <div class="task-card reveal-up">
+                        <i class="fas fa-users-cog task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="قيادة الفرق التطوعية">Team Leadership</h3>
+                        <p class="task-desc lang-flip" data-ar="الإشراف المباشر وقيادة أكثر من 700 متطوع ومتطوعة في مختلف الفعاليات والمبادرات الجامعية.">
+                            Direct supervision and leadership of over 700 male and female volunteers in various university events and initiatives.
+                        </p>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="task-card reveal-up delay-1">
+                        <i class="fas fa-handshake task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="التمثيل الرسمي">Official Representation</h3>
+                        <p class="task-desc lang-flip" data-ar="تمثيل جامعة جدة في محافل رسمية كبرى والتعاون مع جهات حكومية مثل الدفاع المدني في إدارة الحشود والأزمات.">
+                            Representing Jeddah University in major official forums and collaborating with government entities like Civil Defense in crowd and crisis management.
+                        </p>
+                    </div>
+
+                    <!-- Task 3 -->
+                    <div class="task-card reveal-up delay-2">
+                        <i class="fas fa-calendar-check task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="إدارة الفعاليات">Event Management</h3>
+                        <p class="task-desc lang-flip" data-ar="تخطيط وتنظيم الفعاليات التقنية والاجتماعية داخل الجامعة، وضمان سير العمليات اللوجستية بكفاءة عالية.">
+                            Planning and organizing technical and social events within the university, ensuring high efficiency in logistical operations.
+                        </p>
+                    </div>
+
+                    <!-- Task 4 -->
+                    <div class="task-card reveal-up delay-3">
+                        <i class="fas fa-chalkboard-teacher task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="التدريب والتوجيه">Training & Mentorship</h3>
+                        <p class="task-desc lang-flip" data-ar="تدريب المتطوعين الجدد وتوجيههم، وبناء صف ثاني من القادة لضمان استدامة العمل التطوعي في الجامعة.">
+                            Training and mentoring new volunteers, and building a second line of leaders to ensure the sustainability of voluntary work at the university.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate & Gallery Section -->
+        <section class="section-padding" style="background: rgba(0,0,0,0.2);">
+            <div class="container">
+                <div class="cert-block reveal-up" style="border-color: var(--accent-uni);">
+                    <i class="fas fa-medal cert-icon" style="color: var(--accent-uni);"></i>
+                    <h2 class="lang-flip" data-ar="جائزة القائد المتميز" style="font-size: 2rem; margin-bottom: 1rem;">Volunteer Leader of the Year</h2>
+                    <p class="cert-quote lang-flip" data-ar="تكريماً لجهوده الاستثنائية في قيادة العمل التطوعي وتميزه في الإشراف والتنظيم لعام 2025.">
+                        "In recognition of his exceptional efforts in leading voluntary work and his excellence in supervision and organization for the year 2025."
+                    </p>
+                    <div class="cert-name" style="color: var(--accent-uni);">Ali Attia AlZahrani</div>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Jeddah University - Student Affairs</p>
+                </div>
+
+                <div class="section-header reveal-up">
+                    <span class="section-tag">GALLERY</span>
+                    <h2 class="section-title lang-flip" data-ar="معرض الصور" style="border-color: var(--accent-uni);">Gallery</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal-left">
+                        <img src="شهادة-القياده-والاشراف.jpg" alt="Volunteer Leader Award">
+                        <div class="gallery-overlay">
+                            <h3>Volunteer Leader Award</h3>
+                            <p>Official Recognition</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-right">
+                        <img src="صورة الفريق.jpg" alt="Team Photo">
+                        <div class="gallery-overlay">
+                            <h3>Team Leadership</h3>
+                            <p>With the volunteer team</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-left">
+                        <img src="يوم-المهنه-شهادة-اشراف.jpg" alt="Supervision Certificate">
+                        <div class="gallery-overlay">
+                            <h3>Supervision Certificate</h3>
+                            <p>Career Day Event</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-right">
+                        <img src="شهادة-التطوع.jpg" alt="Volunteering Certificate">
+                        <div class="gallery-overlay">
+                            <h3>Volunteering Certificate</h3>
+                            <p>Commitment & Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

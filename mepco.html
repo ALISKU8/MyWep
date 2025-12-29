@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEPCO Journey | Ali AlZahrani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="mepco-page">
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay"></div>
+    <script>
+        // Inline script to prevent FOUC (Flash of Unstyled Content) during transition
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+    
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <span class="logo-text">A.A.Z</span>
+            <div class="logo-dot" style="background: var(--accent-mepco);"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" style="color: var(--accent-mepco);" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Detail Hero -->
+        <section class="detail-hero">
+            <div class="page-badge mepco-badge reveal-text">IT Department</div>
+            <h1 class="detail-title elegant-text" data-text="MEPCO Journey">MEPCO Journey</h1>
+            <h2 class="hero-subtitle-static reveal-text delay-1">رحلتي في شركة الشرق الأوسط لصناعة الورق</h2>
+            
+            <div class="detail-meta reveal-text delay-2">
+                <div class="meta-item">
+                    <i class="far fa-calendar-alt" style="color: var(--accent-mepco);"></i>
+                    <span class="lang-flip" data-ar="يونيو 2025 - يوليو 2025">June 2025 - July 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-mepco);"></i>
+                    <span class="lang-flip" data-ar="جدة، المملكة العربية السعودية">Jeddah, KSA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Tasks Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">TECH</span>
+                    <h2 class="section-title lang-flip" data-ar="المهام التقنية والإنجازات" style="border-color: var(--accent-mepco);">Technical Achievements</h2>
+                </div>
+
+                <div class="tasks-grid">
+                    <!-- Task 1 -->
+                    <div class="task-card reveal-up">
+                        <i class="fas fa-network-wired task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="إدارة البنية التحتية للشبكات">Network Infrastructure</h3>
+                        <p class="task-desc lang-flip" data-ar="المشاركة في صيانة ومراقبة البنية التحتية للشبكة الداخلية (LAN)، وضمان استقرار الاتصال بين الأقسام المختلفة، والعمل على أجهزة سيسكو (Switching & Routing).">
+                            Assisted in maintaining and monitoring the Local Area Network (LAN) infrastructure, ensuring stable connectivity across departments, and working with Cisco Switching & Routing configurations.
+                        </p>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="task-card reveal-up delay-1">
+                        <i class="fas fa-tools task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="الدعم الفني والصيانة">IT Support & Maintenance</h3>
+                        <p class="task-desc lang-flip" data-ar="تقديم الدعم الفني المباشر للموظفين، وحل مشاكل العتاد (Hardware) والبرمجيات (Software)، وإجراء عمليات الصيانة الدورية لمحطات العمل والطابعات.">
+                            Provided direct technical support to staff, troubleshooting Hardware and Software issues, and performing routine maintenance on workstations and printers.
+                        </p>
+                    </div>
+
+                    <!-- Task 3 -->
+                    <div class="task-card reveal-up delay-2">
+                        <i class="fas fa-shield-alt task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="أمن المعلومات وإدارة الصلاحيات">Cybersecurity & Access</h3>
+                        <p class="task-desc lang-flip" data-ar="المساعدة في إدارة صلاحيات المستخدمين عبر Active Directory، وتطبيق سياسات الأمن السيبراني الأساسية لضمان حماية بيانات الشركة.">
+                            Assisted in managing user permissions via Active Directory and implementing basic cybersecurity policies to ensure corporate data protection.
+                        </p>
+                    </div>
+
+                    <!-- Task 4 -->
+                    <div class="task-card reveal-up delay-3">
+                        <i class="fas fa-server task-icon"></i>
+                        <h3 class="task-title lang-flip" data-ar="إدارة الأنظمة والخوادم">System Administration</h3>
+                        <p class="task-desc lang-flip" data-ar="مراقبة أداء الخوادم (Servers) والمشاركة في عمليات النسخ الاحتياطي (Backups) لضمان استمرارية الأعمال وعدم فقدان البيانات.">
+                            Monitored server performance and participated in backup procedures to ensure business continuity and data integrity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate & Gallery Section -->
+        <section class="section-padding" style="background: rgba(0,0,0,0.2);">
+            <div class="container">
+                <div class="cert-block reveal-up">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h2 class="lang-flip" data-ar="شهادة إتمام التدريب" style="font-size: 2rem; margin-bottom: 1rem;">Certificate of Achievement</h2>
+                    <p class="cert-quote lang-flip" data-ar="أكمل بنجاح برنامج التدريب التعاوني وقدم مساهمات قيمة لقسم تقنية المعلومات.">
+                        "He successfully completed the Cooperative Training Program and made valuable contributions to the IT Department."
+                    </p>
+                    <div class="cert-name">Ali Attia AlZahrani</div>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">June 15, 2025 - July 17, 2025</p>
+                </div>
+
+                <div class="section-header reveal-up">
+                    <span class="section-tag">GALLERY</span>
+                    <h2 class="section-title lang-flip" data-ar="معرض الصور" style="border-color: var(--accent-mepco);">Gallery</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal-left">
+                        <img src="شهادة مبكو.jpg" alt="MEPCO Certificate">
+                        <div class="gallery-overlay">
+                            <h3>Certificate of Achievement</h3>
+                            <p>Official recognition from MEPCO HR</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal-right">
+                        <img src="صورة استلام شهادة مبكو.jpg" alt="Ali Receiving Certificate">
+                        <div class="gallery-overlay">
+                            <h3>Honoring Ceremony</h3>
+                            <p>Receiving the certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Script to help user replace images -->
+    <script>
+        console.log("To update images, replace the src attributes of #cert-img-placeholder and #photo-img-placeholder");
+    </script>
+</body>
+</html>
