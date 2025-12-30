@@ -1593,3 +1593,62 @@ textarea.gb-input {
         position: static;
     }
 }
+
+/* Legal Warning Box */
+.legal-warning-box {
+    background: rgba(245, 158, 11, 0.1); /* Amber Tint */
+    border: 2px solid #f59e0b; /* Amber Border */
+    border-radius: 16px;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    direction: rtl;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.5s ease-out;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.warning-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.warning-icon {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.4));
+    animation: pulse 2s infinite;
+}
+
+.warning-main {
+    font-family: var(--font-ar);
+    color: #fbbf24; /* Lighter Amber */
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.warning-sub {
+    font-family: var(--font-ar);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+    border-top: 1px solid rgba(245, 158, 11, 0.2);
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+/* Ensure responsiveness for the warning box */
+@media (max-width: 480px) {
+    .legal-warning-box {
+        padding: 0.8rem;
+    }
+    
+    .warning-main {
+        font-size: 0.85rem;
+    }
+}
