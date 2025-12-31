@@ -1,0 +1,240 @@
+/* Hero Section (Home) */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-text-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    position: relative;
+}
+
+.hero-subtitle-static {
+    font-family: var(--font-ar);
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Translation Hint Animation */
+.hero-description:hover::before {
+    opacity: 0;
+}
+
+.hero-description::before {
+    content: 'للعربية ←';
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-ar);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-sky);
+    opacity: 0.7;
+    animation: floatHint 2s ease-in-out infinite;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+@keyframes floatHint {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(5px); }
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Detail Hero (Internal Pages) */
+.detail-hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.15), transparent 70%); /* Default Orange Tint */
+    z-index: -1;
+}
+
+.uni-page .detail-hero::before {
+    background: radial-gradient(circle at center, rgba(14, 165, 233, 0.15), transparent 70%);
+}
+
+.pajo-page .detail-hero::before {
+    background: radial-gradient(circle at center, rgba(126, 34, 206, 0.15), transparent 70%);
+}
+
+.page-badge {
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.mepco-badge {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: var(--accent-mepco);
+}
+
+.uni-badge {
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    color: var(--accent-uni);
+}
+
+.detail-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.detail-meta {
+    display: flex;
+    gap: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-item i {
+    color: var(--accent-sky);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    min-height: 500px;
+}
+
+.gallery-item {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    height: 350px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+}
+
+/* Certificate Text Block */
+.cert-block {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.cert-icon {
+    font-size: 3rem;
+    color: var(--accent-mepco);
+    margin-bottom: 1.5rem;
+}
+
+.cert-quote {
+    font-family: serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.cert-name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent-mepco);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Pages */
+@media (max-width: 968px) {
+    .hero-title { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-subtitle-static { font-size: 1.8rem; }
+    
+    .detail-title { font-size: 2.5rem; }
+    .gallery-grid { grid-template-columns: 1fr; height: auto; }
+    .gallery-item { height: 300px; }
+    .meta-item { font-size: 0.9rem; }
+}

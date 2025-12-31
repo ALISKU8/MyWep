@@ -1,0 +1,217 @@
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.glass-nav {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(var(--glass-blur));
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo-container {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.logo-text {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-sky);
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    color: var(--accent-sky);
+    background: transparent !important; /* Fix blue square issue */
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-sky);
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: 0.3s;
+}
+
+/* Global Grid System & Containers */
+.section-padding {
+    padding: 8rem 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-tag {
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    position: absolute;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid var(--accent-sky);
+}
+
+/* Split Layout */
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.split-image {
+    flex: 1;
+    max-width: 500px; /* Smaller image container */
+}
+
+.split-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.split-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.split-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Footer */
+.main-footer {
+    padding: 3rem 5%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin-bottom: 2rem;
+}
+
+/* Responsive Navigation & Layout */
+@media (max-width: 968px) {
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .split-image {
+        max-width: 100%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .hamburger.active .bar:first-child { transform: rotate(45deg) translate(5px, 6px); }
+    .hamburger.active .bar:last-child { transform: rotate(-45deg) translate(5px, -6px); }
+    
+    .section-padding { padding: 4rem 1.5rem; }
+    .section-title { font-size: 2rem; }
+}
