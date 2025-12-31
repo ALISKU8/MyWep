@@ -29,6 +29,61 @@
     letter-spacing: 2px;
 }
 
+/* Special ALI Logo Styles */
+.ali-logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    animation: whiteGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes whiteGlow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.ali-logo::before, .ali-logo::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ali-logo::before {
+     animation: particlesLeft 3s infinite;
+     top: 50%;
+     left: 50%;
+}
+
+.ali-logo::after {
+     animation: particlesRight 3s infinite 1.5s;
+     top: 50%;
+     left: 50%;
+}
+
+@keyframes particlesLeft {
+    0% { transform: translate(0, 0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(-20px, -20px); opacity: 0; }
+}
+
+@keyframes particlesRight {
+    0% { transform: translate(0, 0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(20px, -20px); opacity: 0; }
+}
+
 .logo-dot {
     width: 8px;
     height: 8px;
@@ -57,7 +112,7 @@
     background: transparent !important; /* Fix blue square issue */
 }
 
-.nav-item::after {
+.nav-item::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -68,7 +123,7 @@
     transition: width 0.3s ease;
 }
 
-.nav-item:hover::after {
+.nav-item:hover::before {
     width: 100%;
 }
 

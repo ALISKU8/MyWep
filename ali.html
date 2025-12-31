@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile | Ali AlZahrani</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .secret-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .secret-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+        
+        .profile-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            font-size: 1.1rem;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        
+        .info-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-icon {
+            color: var(--accent-sky);
+            font-size: 1.4rem;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .back-btn {
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay"></div>
+    <script>
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <a href="ali.html" class="ali-logo">ALI</a>
+            <div class="logo-dot"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="pajo.html" class="nav-item lang-flip" data-ar="باجو">Pajo</a></li>
+            <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="section-padding">
+            <div class="container">
+                <div class="secret-card reveal-up">
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <i class="fas fa-fingerprint fa-4x" style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;"></i>
+                            <h1 class="profile-name lang-flip" data-ar="علي عطيه الزهراني">Ali Attia AlZahrani</h1>
+                            <p class="lang-flip" data-ar="معلومات شخصية" style="opacity: 0.7; letter-spacing: 1px; text-transform: uppercase;">Personal Profile</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake info-icon"></i>
+                            <span class="lang-flip" data-ar="تاريخ الميلاد: 19 نوفمبر 2005">DOB: November 19, 2005</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap info-icon"></i>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="lang-flip" data-ar="دبلوم برمجة وعلوم الحاسب">Diploma in CS & Programming</span>
+                                <span class="lang-flip" data-ar="الكلية التطبيقية - جامعة جدة" style="font-size: 0.85rem; opacity: 0.6;">Applied College - Jeddah University</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-palette info-icon"></i>
+                            <span class="lang-flip" data-ar="لوني المفضل: الأبيض">Favorite Color: White</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-hiking info-icon"></i>
+                            <span class="lang-flip" data-ar="الهوايات: ركوب الخيل وتسلق الجبال">Hobbies: Horse Riding & Hiking</span>
+                        </div>
+
+                        <div>
+                            <a href="index.html" class="back-btn">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="lang-flip" data-ar="العودة للرئيسية">Back to Home</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
