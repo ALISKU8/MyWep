@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الرسمي للمبرمج علي الزهراني | Ali Al-Zahrani</title>
     <meta name="description" content="الموقع الرسمي للمبرمج علي الزهراني. طالب علوم حاسب بجامعة جدة، قائد فرق تطوعية، ومهتم بالحلول التقنية المبتكرة.">
-    <meta name="keywords" content="علي الزهراني, علي عطيه الزهراني, علي عطية الزهراني, المبرمج علي الزهراني, Ali Al-Zahrani, Ali Alzahrani, ali alzahrani, Ali Atiah Al-Zahrani, Ali Atiah Alzahrani,  ali attia alZahrani, Ali Attia AlZahrani, ali atiah alzahrani, Ali Attiah Al-Zahrani, Ali Attia Al-Zahrani, جامعة جدة, مبرمج سعودي, قائد متطوع">
+    <meta name="keywords" content="Ali Al-Zahrani, علي الزهراني, Ali Attia Al-Zahrani, علي عطية الزهراني, Saudi Developer, مبرمج سعودي, Jeddah University, جامعة جدة, Volunteer Leader, قائد متطوع, Full Stack Developer, Cyber Security, Yaqadh, Pajo">
     <meta property="og:title" content="علي عطيه الزهراني | Ali Al-Zahrani">
     <meta property="og:description" content="الموقع الرسمي للمبرمج علي الزهراني - استكشف مشاريعي واهتماماتي في الحاسب والقيادة التطوعية.">
     <meta property="og:url" content="https://alialzahrani.com">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/guestbook.css">
+    <link rel="stylesheet" href="css/yaqadh_additions.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -53,10 +54,11 @@
             <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
             <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
             <li><a href="pajo.html" class="nav-item lang-flip" data-ar="باجو">Pajo</a></li>
+            <li><a href="yaqadh.html" class="nav-item lang-flip" data-ar="برنامجي يقظ">Yaqadh | My App</a></li>
             <li><a href="#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
         </ul>
 
-        <div class="hamburger">
+        <div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
@@ -89,6 +91,9 @@
                         <a href="pajo.html" class="action-pill pajo-theme">
                             <i class="fab fa-chrome"></i> Pajo Extension
                         </a>
+                        <a href="yaqadh.html" class="action-pill yaqadh-theme">
+                            <i class="fas fa-shield-alt"></i> Yaqadh Suite
+                        </a>
                     </div>
                 </div>
             </div>
@@ -99,6 +104,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- About Section (Bento Grid Start) -->
         <section id="about" class="section-padding">
@@ -195,6 +202,23 @@
                             <div class="exp-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                         <div class="card-glow purple-glow"></div>
+                    </a>
+
+                    <!-- Yaqadh Card (NEW) -->
+                    <a href="yaqadh.html" class="experience-card yaqadh-card reveal-right">
+                        <div class="exp-content">
+                            <div class="exp-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="exp-details">
+                                <span class="exp-role lang-flip" data-ar="أمن سيبراني">Cyber Security</span>
+                                <h3 class="exp-company">يقظ</h3>
+                                <p class="exp-desc">
+                            <span class="en">Advanced Python-based security suite for network scanning and data protection.</span>
+                            <span class="ar">مجموعة أدوات أمنية متقدمة مبنية بلغة بايثون لفحص الشبكات وحماية البيانات.</span>
+                        </p>
+                            </div>
+                            <div class="exp-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                        <div class="card-glow yaqadh-glow-card"></div>
                     </a>
 
                     <!-- Career Guidance Card (Teaser) -->
@@ -326,7 +350,7 @@
 
     <footer class="main-footer">
         <div class="footer-line"></div>
-        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+        <p>&copy; 2026 Ali Attia AlZahrani. All Rights Reserved.</p>
     </footer>
 
     <script src="js/cursor.js"></script>

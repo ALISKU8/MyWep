@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يقظ - Ali Al-Zahrani</title>
+    <meta name="description" content="يقظ: مجموعة الأمن السيبراني المتقدمة القائمة على بايثون. فحص الشبكات، تشفير البيانات، وتحليل الثغرات.">
+    <meta property="og:title" content="يقظ - Cyber Security Suite">
+    <meta property="og:description" content="مجموعة أدوات أمنية متقدمة لحماية الأنظمة والشبكات.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/yaqadh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="yaqadh-page">
+    <!-- Page Transition Overlay -->
+    <div id="transition-overlay"></div>
+    <script>
+        (function() {
+            const overlay = document.getElementById('transition-overlay');
+            const transitionColor = sessionStorage.getItem('transitionColor');
+            if (transitionColor && overlay) {
+                overlay.style.background = transitionColor;
+                overlay.style.opacity = '1';
+                overlay.style.transition = 'none';
+            }
+        })();
+    </script>
+    
+    <!-- Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo-container">
+            <a href="ali.html" class="ali-logo">ALI</a>
+            <div class="logo-dot" style="background: var(--yaqadh-accent);"></div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item lang-flip" data-ar="الرئيسية">Home</a></li>
+            <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
+            <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
+            <li><a href="pajo.html" class="nav-item lang-flip" data-ar="باجو">Pajo</a></li>
+            <li><a href="yaqadh.html" class="nav-item lang-flip" style="color: var(--yaqadh-accent);" data-ar="برنامجي يقظ">Yaqadh | My App</a></li>
+            <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Yaqadh Section Content (Moved from Index) -->
+        <section class="yaqadh-section"> <!-- Added padding-top for fixed nav -->
+            <div class="yaqadh-glow"></div>
+            <div class="yaqadh-container">
+                <!-- Header -->
+                <div class="yaqadh-header reveal-up">
+                    <img src="شعار يقظ.png" class="yaqadh-logo-img" alt="Yaqadh Logo">
+                    <h1 class="yaqadh-title">يقظ | Yaqadh</h1>
+                    <p class="yaqadh-subtitle lang-flip" data-ar="برنامج امن سيبراني من تطويري بلغة بايثون اسميته يقظ">A cyber-security program developed by me in Python named Yaqadh</p>
+                </div>
+
+                <!-- 5 Modules Grid -->
+                <div class="yaqadh-grid">
+                    <!-- Module 1 -->
+                    <div class="module-card reveal-up delay-1">
+                        <div class="module-visual">
+                            <img src="رادار الشبكه يقظ.png" alt="Network Scanner" loading="lazy">
+                        </div>
+                        <div class="module-info">
+                            <h3 class="lang-flip" data-ar="فحص الشبكات">Network Scanner</h3>
+                            <p class="lang-flip" data-ar="اكتشاف الأجهزة وتحليل المنافذ المفتوحة بدقة عالية.">Advanced device discovery and port analysis tools.</p>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="module-card reveal-up delay-2">
+                        <div class="module-visual">
+                            <img src="درع التشفير يقظ.png" alt="Data Encryption" loading="lazy">
+                        </div>
+                        <div class="module-info">
+                            <h3 class="lang-flip" data-ar="تشفير البيانات">Data Encryption</h3>
+                            <p class="lang-flip" data-ar="تأمين الملفات الحساسة باستخدام خوارزميات تشفير متقدمة.">Secure sensitive files with military-grade encryption.</p>
+                        </div>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="module-card reveal-up delay-3">
+                        <div class="module-visual">
+                            <img src="حارس الويب يقظpng.png" alt="Vulnerability Scan" loading="lazy">
+                        </div>
+                        <div class="module-info">
+                            <h3 class="lang-flip" data-ar="تحليل الثغرات">Vulnerability Scan</h3>
+                            <p class="lang-flip" data-ar="فحص تلقائي للثغرات الأمنية المعروفة في النظام.">Automated scanning for known system vulnerabilities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="module-card reveal-up delay-1">
+                        <div class="module-visual">
+                            <img src="مراقب النظام يقظ.png" alt="Threat Monitor" loading="lazy">
+                        </div>
+                        <div class="module-info">
+                            <h3 class="lang-flip" data-ar="مراقبة التهديدات">Threat Monitor</h3>
+                            <p class="lang-flip" data-ar="مراقبة حية للأنشطة المشبوهة ومحاولات الاختراق.">Real-time monitoring of suspicious activities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="module-card reveal-up delay-2">
+                        <div class="module-visual">
+                            <img src="لوحة التحكم يقظ.png" alt="Log Analysis" loading="lazy">
+                        </div>
+                        <div class="module-info">
+                            <h3 class="lang-flip" data-ar="تحليل السجلات">Log Analysis</h3>
+                            <p class="lang-flip" data-ar="تحليل ذكي لسجلات النظام باستخدام الذكاء الاصطناعي.">AI-powered analysis of system logs and events.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Demo -->
+                <div class="live-demo-wrapper reveal-up delay-3">
+                    <div class="status-badge yaqadh-status-badge">
+                        <span class="status-dot yaqadh-status-dot"></span>
+                        Live Interface Demo
+                    </div>
+                    
+                    <div class="laptop-frame">
+                        <div class="laptop-camera"></div>
+                        <div class="laptop-screen">
+                            <!-- Placeholder for GIF -->
+                            <img src="مقطع بسيط لعرض يقظ.gif" alt="Yaqadh Demo" class="demo-gif yaqadh-demo-gif">
+                        </div>
+                    </div>
+                    <div class="laptop-base"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-line"></div>
+        <p>&copy; 2026 Ali Attia AlZahrani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cursor.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

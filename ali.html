@@ -19,100 +19,6 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .secret-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 3rem;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .secret-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-            animation: rotate 15s linear infinite;
-        }
-        
-        .profile-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .profile-name {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, #a5f3fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 1.5rem;
-            font-size: 1.1rem;
-            padding: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-        
-        .info-item:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .info-icon {
-            color: var(--accent-sky);
-            font-size: 1.4rem;
-            width: 30px;
-            text-align: center;
-        }
-        
-        .back-btn {
-            margin-top: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .back-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body>
     <!-- Page Transition Overlay -->
@@ -145,6 +51,7 @@
             <li><a href="mepco.html" class="nav-item lang-flip" data-ar="مبكو">MEPCO</a></li>
             <li><a href="jeddah_uni.html" class="nav-item lang-flip" data-ar="جامعة جدة">UJ</a></li>
             <li><a href="pajo.html" class="nav-item lang-flip" data-ar="باجو">Pajo</a></li>
+            <li><a href="yaqadh.html" class="nav-item lang-flip" data-ar="برنامجي يقظ">Yaqadh</a></li>
             <li><a href="index.html#contact" class="nav-item lang-flip" data-ar="تواصل">Contact</a></li>
         </ul>
 
@@ -202,7 +109,7 @@
 
     <footer class="main-footer">
         <div class="footer-line"></div>
-        <p>&copy; 2025 Ali Attia AlZahrani. All Rights Reserved.</p>
+        <p>&copy; 2026 Ali Attia AlZahrani. All Rights Reserved.</p>
     </footer>
 
     <script src="js/cursor.js"></script>

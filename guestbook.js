@@ -108,11 +108,11 @@ if (guestbookForm) {
             
             // Reset Form
             guestbookForm.reset();
-            submitBtn.innerHTML = 'Success!';
+            submitBtn.innerHTML = 'Success! (Cooldown 10s)';
             setTimeout(() => {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-            }, 2000);
+            }, 10000);
         }).catch((error) => {
             console.error("Error writing to Guestbook: ", error);
             submitBtn.innerHTML = 'Error';

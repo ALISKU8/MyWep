@@ -1,0 +1,29 @@
+/* Additions for Yaqadh Theme in Core/Components */
+
+/* Action Pill */
+.yaqadh-theme {
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #a855f7;
+}
+
+.yaqadh-theme:hover {
+    background: rgba(168, 85, 247, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+}
+
+.yaqadh-theme .lang-flip::after { color: #a855f7; }
+
+/* Experience Card */
+.yaqadh-card .exp-icon, 
+.yaqadh-card .exp-company, 
+.yaqadh-card .exp-arrow {
+    color: #a855f7;
+}
+
+.yaqadh-card .exp-desc .ar { color: #a855f7; }
+
+.yaqadh-glow-card {
+    background: radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.2), transparent 60%);
+}

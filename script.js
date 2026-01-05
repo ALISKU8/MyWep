@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         color = '#f59e0b'; // MEPCO Orange
                     } else if (href.includes('jeddah_uni.html')) {
                         color = '#0ea5e9'; // Uni Blue
+                    } else if (href.includes('yaqadh.html')) {
+                        color = '#a855f7'; // Yaqadh Purple
                     }
 
                     // Save color for next page
